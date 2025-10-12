@@ -1,0 +1,103 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulamam.Pages.Profilim"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#1A1A1A" Offset="0.0"/>
+            <GradientStop Color="#0D0D0D" Offset="0.5"/>
+            <GradientStop Color="#262626" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" Spacing="20">
+
+            <Grid HeightRequest="180" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Frame WidthRequest="120"
+                       HeightRequest="120"
+                       CornerRadius="60"
+                       BackgroundColor="#222222"
+                       BorderColor="White"
+                       Padding="0"
+                       HasShadow="False"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       ZIndex="1">
+                    <Image x:Name="notResim"
+                           Source="avatar_placeholder.png"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Fill"/>
+                </Frame>
+
+                <Frame WidthRequest="40"
+                       HeightRequest="40"
+                       CornerRadius="20"
+                       BackgroundColor="#CC000000"
+                       Padding="0"
+                       HasShadow="False"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="80,80,0,0"
+                       ZIndex="2">
+                    <Label Text="+"
+                           TextColor="White"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="PickImage_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+            </Grid>
+
+            <Label x:Name="KullaniciAdiLabel"
+                   HorizontalTextAlignment="Center"
+                   FontSize="15"
+                   Text="Kullanıcı Adı"
+                   FontAttributes="Bold"
+                   FontFamily="Verdana"
+                   TextColor="#FFFFFF"/>
+
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,20,0" Spacing="10">
+                <Image Source="user.png" HeightRequest="30" WidthRequest="30" />
+                <Frame WidthRequest="280" HeightRequest="40" CornerRadius="30" BackgroundColor="#2D2D2D"/>
+            </HorizontalStackLayout>
+
+            <Label HorizontalTextAlignment="Center"
+                   FontSize="15"
+                   Text="E-Posta"
+                   FontAttributes="Bold"
+                   FontFamily="Verdana"
+                   TextColor="#FFFFFF"/>
+
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,20,0" Spacing="10">
+                <Image Source="email.png" HeightRequest="30" WidthRequest="30" />
+                <Frame WidthRequest="280" HeightRequest="40" CornerRadius="30" BackgroundColor="#2D2D2D"/>
+            </HorizontalStackLayout>
+
+            <Image Source="assets_task_01k1c5q6n3fdybhnv7y1k4d7c7_1753829132_img_1.png"
+                   WidthRequest="200"
+                   HeightRequest="100"
+                   Margin="0,50,0,0"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,40,0,0" Spacing="5">
+                <Image Source="network.png" HeightRequest="30" WidthRequest="30" />
+                <Label Text="Koyduğunuz Resim Üyeler Kısmında Gözükecektir."
+                       TextColor="#FFFFFF"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       LineBreakMode="WordWrap"
+                       FontSize="12"
+                       HorizontalTextAlignment="Center"
+                       FontFamily="Verdana"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

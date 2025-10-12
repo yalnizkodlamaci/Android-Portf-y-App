@@ -1,0 +1,43 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulamam.Pages.Üyeler"
+             Title="Üyeler"
+             Shell.NavBarIsVisible="False">
+
+    <CollectionView ItemsSource="{Binding Notlar}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Margin="5"
+                       Padding="5"
+                       CornerRadius="8"
+                       HasShadow="False"
+                       BackgroundColor="#1F2937">
+
+                    <HorizontalStackLayout Spacing="10">
+
+                        <Image Source="{Binding ResimUrl}"
+                               HeightRequest="40"
+                               WidthRequest="40"
+                               VerticalOptions="Center"
+                               Aspect="AspectFill"/>
+
+                        <VerticalStackLayout>
+                            <Label Text="{Binding KullanıcıAdı}"
+                                   TextColor="White"
+                                   FontSize="14"
+                                   FontAttributes="Bold"/>
+                            <Label Text="{Binding Mesaj}"
+                                   TextColor="LightGray"
+                                   FontSize="12"
+                                   LineBreakMode="TailTruncation"/>
+                            <Label Text="{Binding Tarih}"
+                                   TextColor="Gray"
+                                   FontSize="10"/>
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

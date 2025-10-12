@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulamam.Pages.RegisterPage"
+             BackgroundColor="#1E1E1E"
+             Title="RegisterPage">
+    
+    <VerticalStackLayout VerticalOptions="Center" >
+
+
+
+
+        <Image Source="assets_task_01k1c5q6n3fdybhnv7y1k4d7c7_1753829132_img_1.png" WidthRequest="200" HeightRequest="200" Margin="0,0,0,20" >
+
+        </Image>
+        <Entry x:Name="KullanıcıAdıKayıt" Placeholder="Kullanıcı Adınızı Belirleyiniz."  PlaceholderColor="LightGray" TextColor="White"  BackgroundColor="#1E1E1E" HeightRequest="20" WidthRequest="250" Margin="10" />
+        <Entry x:Name="ŞifreKayıt" Placeholder="Şifrenizi Belirleyiniz."   PlaceholderColor="LightGray" TextColor="White"  BackgroundColor="#1E1E1E" HeightRequest="20" WidthRequest="250" Margin="0,30,0,0" />
+        <Entry x:Name="EmailKayıt" Placeholder="Emailinizi Belirleyiniz."   PlaceholderColor="LightGray" TextColor="White"  BackgroundColor="#1E1E1E" HeightRequest="20" WidthRequest="250" Margin="0,40,0,0" />
+
+
+
+        <Button x:Name="KayıtButton" Text="Kayıt Ol" CornerRadius="10" BackgroundColor="{StaticResource Fire Engine Red}" WidthRequest="200" Margin="0,50,0,0" Clicked="KayıtOlButton_Clicked" >
+
+        </Button>
+
+        <Label Text="İş İçin : yalnizkodlamacii@gmail.com" TextColor="White" HorizontalOptions="Center" Margin="0,20,0,0"/>
+        <Label Text="Full Stack Developer" TextColor="White" HorizontalOptions="Center" Margin="0,20,0,0"/>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

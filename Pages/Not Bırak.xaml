@@ -1,0 +1,84 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulamam.Pages.Not_Bırak"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#1A1A1A" Offset="0.0"/>
+            <!-- Koyu gri / siyah üst -->
+            <GradientStop Color="#0D0D0D" Offset="0.5"/>
+            <!-- Siyah orta -->
+            <GradientStop Color="#262626" Offset="1.0"/>
+            <!-- Hafif gri alt -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25" VerticalOptions="CenterAndExpand">
+
+            <!-- Başlık -->
+            <Label Text="İlhamını Paylaş"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,10"/>
+
+            <!-- Açıklama -->
+            <Label Text="Bana moral verecek cümleni yaz ve tüm üyelerle paylaş"
+                   FontSize="16"
+                   TextColor="#E5E7EB"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+            <!-- Kart İçinde Editor -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   Padding="20"
+                   HasShadow="True"
+                   WidthRequest="300">
+                <Editor x:Name="notYaz"
+                        Placeholder="Notunu buraya yaz..."
+                        FontSize="16"
+                        AutoSize="TextChanges"
+                        HeightRequest="150"                        
+                        TextColor="#111827"/>
+            </Frame>
+
+            <!-- Gönder Butonu -->
+            <Button Text="Gönder"
+                    BackgroundColor="{StaticResource Fire Engine Red}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    WidthRequest="250"
+                    Margin="0,10,0,0"
+                    Clicked="Gönder_Clicked"
+                    />
+
+            <!-- Alt Dolgu Kartları -->
+            <Frame BackgroundColor="#1F2937"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <Label Text="Buraya kadar geldin,bu bile yeterli."
+                       TextColor="#E5E5E5"
+                       FontSize="14"/>
+            </Frame>
+
+            <Frame BackgroundColor="#1F2937"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <Label Text="Ama... Motivasyonunuda eksik etme."
+                       TextColor="#E5E5E5"
+                       FontSize="14"/>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

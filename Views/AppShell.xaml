@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Uygulamam.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Portföy_="clr-namespace:Uygulamam.Pages"
+    xmlns:Üyeler_="clr-namespace:Uygulamam.Pages"
+    xmlns:Profilim_="clr-namespace:Uygulamam.Pages"
+     xmlns:NotBırak_="clr-namespace:Uygulamam.Pages"
+    Title="Uygulamam"
+    Shell.FlyoutBehavior="Flyout">
+
+
+    <ShellContent
+    Title="Profilim"
+    ContentTemplate="{DataTemplate Profilim_:Profilim}"
+    Route="profilim"/>
+    <ShellContent
+    Title="NotBırak"
+    ContentTemplate="{DataTemplate NotBırak_:Not_Bırak}"
+    Route="Not Bırak"/>
+    <ShellContent
+    Title="Üyeler"
+    ContentTemplate="{DataTemplate Üyeler_:Üyeler}"
+    Route="üyeler"/>
+
+    
+    
+    
+
+</Shell>
